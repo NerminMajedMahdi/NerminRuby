@@ -40,28 +40,24 @@ group :development, :test do
   gem 'byebug', platform: :mri 
 end
 
+group :development do
+  # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
+  gem 'web-console', '>= 3.3.0'
+  gem 'listen', '~> 3.0.5'
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'sqlite3'
+end
 
-development:
-  adapter: postgresql
-  database: my_database_development
-  pool: 5
-  timeout: 5000
-test:
-  adapter: postgresql
-  database: my_database_test
-  pool: 5
-  timeout: 5000
-
-production:
-  adapter: postgresql
-  database: my_database_production
-  pool: 5
-  timeout: 5000
+group :production do
+  gem 'pg'
+end
 
 
 
 group :development, :test do
-  gem 'pg'
+  gem 'sqlite3'
 end
 
 
