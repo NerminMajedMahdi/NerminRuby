@@ -40,7 +40,6 @@ group :development, :test do
   gem 'byebug', platform: :mri 
 end
 
-adapter: postgresql
 
 development:
   adapter: postgresql
